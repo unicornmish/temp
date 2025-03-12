@@ -117,7 +117,11 @@ const SalesPerformance: React.FC = () => {
 
   return (
     <>
-    <Button variant="contained"  onClick={() => setOpenAdd(true)}>Adicionar Vendedor</Button>
+   <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
+  <Button variant="contained" onClick={() => setOpenAdd(true)}>
+    Adicionar Vendedor
+  </Button>
+</Box>
     <Card sx={{ padding: "20px", boxShadow: "none", borderRadius: "7px" }}>
       <Typography variant="h5" fontWeight={700} mb={2}>Desempenho dos Vendedores</Typography>
       

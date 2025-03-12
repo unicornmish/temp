@@ -147,15 +147,17 @@ const KPI = () => {
       {/* Detalhes da Meta Selecionada */}
       <Card sx={{ flex: 1, p: 2, boxShadow: "none" }}>
         <Typography variant="h6" mb={2}>
-          {selectedGoal ? `Membros de ${selectedGoal.name}` : "Selecione uma meta"}
+          {selectedGoal ? `` : "Selecione uma meta"}
         </Typography>
         {selectedGoal ? (
           selectedGoal.members.length > 0 ? (
             <SalesPerformance members={selectedGoal.members} />
           ) : (
+            <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
             <Button variant="contained" color="primary" onClick={() => setOpenModal(true)}>
               Adicionar Membro
             </Button>
+            </Box>
           )
         ) : null}
       </Card>
